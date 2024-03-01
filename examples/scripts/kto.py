@@ -50,7 +50,9 @@ python examples/scripts/kto.py \
     --use_peft \
     --lora_r=32 \
     --lora_alpha=16 \
-    --precompute_ref_log_probs=True
+    --precompute_ref_log_probs=True\
+    --load_in_4bit=True
+    --lora_target_modules=["q_proj", "v_proj", "k_proj", "o_proj", "gate_proj", "down_proj", "up_proj"]
 """
 
 from dataclasses import dataclass, field
